@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Probabilidade de Cores</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <style>
+    body {
+      width: 100vw;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    .container-fluid {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-sm-4">
+        <h3>Escolha a cor da última rodada</h3>
+        <select class="form-control" id="last-color">
+          <option value="none" selected>Nenhuma escolha</option>
+          <option value="branco">Branco</option>
+          <option value="preto">Preto</option>
+          <option value="vermelho">Vermelho</option>
+        </select>
+        <br>
+        <button class="btn btn-primary" onclick="calculateProb()">Calcular Probabilidade</button>
+      </div>
+      <div class="col-sm-8">
+        <h3>Probabilidade de Cores</h3>
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Cor</th>
+              <th>Quantidade</th>
+              <th>Probabilidade</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Branco</td>
+              <td id="qtd-branco">0</td>
+              <td id="prob-branco">0%</td>
+            </tr>
+            <tr>
+              <td>Preto</td>
+              <td id="qtd-preto">0</td>
+              <td id="prob-preto">0%</td>
+            </tr>
+            <tr>
+              <td>Vermelho</td>
+              <td id="qtd-vermelho">0</td>
+              <td id="prob-vermelho">0%</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+
+</body>
+
+</html>
